@@ -1,0 +1,53 @@
+/* LineManagerBoxContainer styling */
+.line-manager-box-container {
+    position: relative;
+    width: 550px;
+    height: auto;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+/* Layer styles */
+.line-manager-box-container .line-manager-box-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+}
+
+.line-manager-box-container .line-manager-layer1 {
+    top: 90px;
+    left: 75px;
+    z-index: 0;
+}
+
+.line-manager-box-container .line-manager-layer2 {
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.line-manager-box-container .line-manager-layer3 {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(171, 152, 198, 1);
+}
+
+/* Paragraph text styling */
+.line-manager-box-container .line-manager-layer3 p {
+    font-weight: 400;
+    font-family: 'MonaSansLight';
+    font-size: 16px; 
+    line-height: 24px; 
+    color: rgba(67, 58, 91, 1);
+}
+
+/* Custom horizontal line style */
+.line-manager-box-container hr.line-manager-custom-line {
+    background-color: rgba(171, 152, 198, 1); 
+    height: 1px;
+    border: none;
+    margin: 15px 0; 
+}

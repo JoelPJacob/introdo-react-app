@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MonaSansExtraLight from '../src/fonts/MonaSans/MonaSans-ExtraLight.ttf'
+import MonaSansMedium from '../src/fonts/MonaSans/MonaSans-Medium.ttf'
+import MonaSansLight from '../src/fonts/MonaSans/MonaSans-Light.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

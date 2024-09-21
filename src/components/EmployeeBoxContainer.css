@@ -1,0 +1,53 @@
+/* EmployeeBoxContainer styling */
+.employee-box-container {
+    position: relative;
+    width: 550px;
+    height: auto;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+/* Layer styles */
+.employee-box-container .employee-box-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+}
+
+.employee-box-container .employee-layer1 {
+    top: 90px;
+    right: 60px;
+    z-index: 0;
+}   
+
+.employee-box-container .employee-layer2 {
+    top: 50px;
+    right: 30px;
+    z-index: 1;
+}
+
+.employee-box-container .employee-layer3 {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(255, 197, 138, 1);
+}
+
+/* Paragraph text styling */
+.employee-box-container .employee-layer3 p {
+    font-weight: 400;
+    font-family: 'MonaSansLight';
+    font-size: 16px; 
+    line-height: 24px; 
+    color: rgba(67, 58, 91, 1);
+}
+
+/* Custom horizontal line style */
+.employee-box-container hr.employee-custom-line {
+    background-color: rgba(255, 197, 138, 1); 
+    height: 1px;
+    border: none;
+    margin: 15px 0; 
+}
