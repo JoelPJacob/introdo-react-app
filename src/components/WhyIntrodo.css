@@ -1,3 +1,6 @@
+h3{
+  margin: 0 !important;
+}
 .why-intro-section {
   text-align: center;
   padding: 120px 220px 0px 100px; 
@@ -39,6 +42,7 @@
   padding: 20px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 554px;
 }
 
 .why-intro-box h3 {
@@ -218,3 +222,9 @@
   margin-right: 5px; /* Adjust the spacing as needed */
 }
 
+.no-padding{
+  padding: 0 !important;
+}
+.legacy-harmony-desc{
+  padding: 20px;
+}

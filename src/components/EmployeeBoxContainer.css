@@ -16,14 +16,14 @@
 }
 
 .employee-box-container .employee-layer1 {
-    top: 90px;
-    right: 60px;
+    top: 120px;
+    right: 10px;
     z-index: 0;
 }   
 
 .employee-box-container .employee-layer2 {
-    top: 50px;
-    right: 30px;
+    top: 90px;
+    left: 30px;
     z-index: 1;
 }
 
@@ -33,6 +33,7 @@
     padding: 20px;
     background-color: white;
     border: 1px solid rgba(255, 197, 138, 1);
+    left: 70px;
 }
 
 /* Paragraph text styling */

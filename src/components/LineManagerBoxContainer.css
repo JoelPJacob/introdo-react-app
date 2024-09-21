@@ -16,14 +16,14 @@
 }
 
 .line-manager-box-container .line-manager-layer1 {
-    top: 90px;
-    left: 75px;
+    top: 110px;
+    left: 120px;
     z-index: 0;
 }
 
 .line-manager-box-container .line-manager-layer2 {
-    top: 50px;
-    right: 50px;
+    top: 80px;
+    right: 10px;
     z-index: 1;
 }
 
@@ -33,6 +33,7 @@
     padding: 20px;
     background-color: white;
     border: 1px solid rgba(171, 152, 198, 1);
+    left: 40px;
 }
 
 /* Paragraph text styling */

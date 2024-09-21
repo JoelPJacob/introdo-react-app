@@ -5,8 +5,19 @@ import HRBoxContainer from '../components/HRBoxContainer';
 import LineManagerBoxContainer from '../components/LineManagerBoxContainer';
 import EmployeeBoxContainer from '../components/EmployeeBoxContainer';
 import WhyIntrodo from '../components/WhyIntrodo';
-import { ReactComponent as ChatIcon} from '../assets/icons/chat-icon.svg';
+import { ReactComponent as ChatIcon } from '../assets/icons/chat-icon.svg';
 
+const TabDescription = ({data = []}) => {
+  return (
+    <div style={{display:'flex',flexDirection:'column',justifyContent:'space-between',marginRight:'7%'}}>
+      {data.map((item) => (
+        <div style={{borderTop:item.id===2?'1px solid':'',borderBottom:item.id===2?'1px solid':'',paddingTop:'40%',paddingBottom:'40%'}} key={item.desc}>{item.desc}</div>
+      ))}
+    </div>
+  );
+};
+
+const descriptionData = [{ id: 1, desc: 'dhfhdfhdhj' },{ id: 2, desc: 'dhfhdfhdhj' },{ id: 3, desc: 'dhfhdfhdhj' }]
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState('HR');
   let autoSwitchInterval;
@@ -63,7 +74,7 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
-    autoSwitchInterval = setInterval(switchTabs, 10000);
+    // autoSwitchInterval = setInterval(switchTabs, 10000);
     return () => clearInterval(autoSwitchInterval);
   }, [activeTab]);
 
@@ -72,10 +83,10 @@ const LandingPage = () => {
       <h2 className="empower-title">EMPOWER EVERY ROLE</h2>
       <h1 className="benefits-title">Triple The Benefits!</h1>
       <TabBar tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
-      {activeTab === 'HR' && <HRBoxContainer tabs={tabs} activeTab={activeTab} />}
-      {activeTab === 'LineManager' && <LineManagerBoxContainer tabs={tabs} activeTab={activeTab} />}
-      {activeTab === 'Employee' && <EmployeeBoxContainer tabs={tabs} activeTab={activeTab} />}
-      <WhyIntrodo/>
+      {activeTab === 'HR' && <div style={{ display: 'flex',width:'60%' }}><TabDescription data={descriptionData} /> <HRBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      {activeTab === 'LineManager' && <div style={{ display: 'flex' ,width:'60%'}}><TabDescription data={descriptionData} /><LineManagerBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      {activeTab === 'Employee' && <div style={{ display: 'flex',width:'60%' }}><TabDescription data={descriptionData} /><EmployeeBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      <WhyIntrodo />
       <div className="vertical-text">Schedule a Demo</div>
       <div className="chat-circle">
         <ChatIcon />

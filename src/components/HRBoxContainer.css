@@ -15,13 +15,13 @@
 }
 
 .hr-layer1 {
-  top: 90px;
+  top: 110px;
   left: 120px;
   z-index: 0;
 }
 
 .hr-layer2 {
-  top: 50px;
+  top: 80px;
   left: 80px;
   z-index: 1;
 }
