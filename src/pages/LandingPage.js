@@ -6,18 +6,47 @@ import LineManagerBoxContainer from '../components/LineManagerBoxContainer';
 import EmployeeBoxContainer from '../components/EmployeeBoxContainer';
 import WhyIntrodo from '../components/WhyIntrodo';
 import { ReactComponent as ChatIcon } from '../assets/icons/chat-icon.svg';
+import { ReactComponent as HrMsg } from '../assets/icons/hr-messages.svg';
+import { ReactComponent as HrPrgrmArrow } from '../assets/icons/hr-programming-arrows.svg';
+import { ReactComponent as HrEdit } from '../assets/icons/hr-edit-2.svg';
+import { ReactComponent as LineMsg } from '../assets/icons/line-edit-2.svg';
+import { ReactComponent as LinePrgrmArrow } from '../assets/icons/line-programming-arrows.svg';
+import { ReactComponent as LineEdit } from '../assets/icons/line-edit-2.svg';
+import { ReactComponent as EmpMsg } from '../assets/icons/emp-edit-2.svg';
+import { ReactComponent as EmpPrgrmArrow } from '../assets/icons/emp-programming-arrows.svg';
+import { ReactComponent as EmpEdit } from '../assets/icons/emp-edit-2.svg';
 
-const TabDescription = ({data = []}) => {
+
+const TabDescription = ({ data = [] }) => {
   return (
-    <div style={{display:'flex',flexDirection:'column',justifyContent:'space-between',marginRight:'7%'}}>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginRight: '7%',width:'19%' }}>
       {data.map((item) => (
-        <div style={{borderTop:item.id===2?'1px solid':'',borderBottom:item.id===2?'1px solid':'',paddingTop:'40%',paddingBottom:'40%'}} key={item.desc}>{item.desc}</div>
+        <div style={{display:'flex', textAlign:'left',borderTop: item.id === 2 ? '1px solid' : '', borderBottom: item.id === 2 ? '1px solid' : '', paddingTop: '20%', paddingBottom: '20%' }} key={item.id}>
+          <div style={{marginRight:'10px'}}>{item.icon}</div>
+          <div>{item.desc}</div>
+        </div>
       ))}
     </div>
   );
 };
 
-const descriptionData = [{ id: 1, desc: 'dhfhdfhdhj' },{ id: 2, desc: 'dhfhdfhdhj' },{ id: 3, desc: 'dhfhdfhdhj' }]
+const hrDescriptionData = [
+  { id: 1, desc: 'Streamline Workforce Management',icon:<HrMsg/> },
+  { id: 2, desc: 'Smooth Employee Onboarding',icon:<HrPrgrmArrow/> },
+  { id: 3, desc: 'Enhance Internal Communication',icon:<HrEdit/> }
+]
+
+const lineManagerDescriptionData = [
+  { id: 1, desc: 'Streamline Workforce Management',icon:<LineMsg/> },
+  { id: 2, desc: 'Smooth Employee Onboarding',icon:<LinePrgrmArrow/> },
+  { id: 3, desc: 'Enhance Internal Communication',icon:<LineEdit/> }
+]
+
+const employeeDescriptionData = [
+  { id: 1, desc: 'Streamline Workforce Management',icon:<EmpMsg/> },
+  { id: 2, desc: 'Smooth Employee Onboarding',icon:<EmpPrgrmArrow/> },
+  { id: 3, desc: 'Enhance Internal Communication',icon:<EmpEdit/> }
+]
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState('HR');
   let autoSwitchInterval;
@@ -83,9 +112,9 @@ const LandingPage = () => {
       <h2 className="empower-title">EMPOWER EVERY ROLE</h2>
       <h1 className="benefits-title">Triple The Benefits!</h1>
       <TabBar tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
-      {activeTab === 'HR' && <div style={{ display: 'flex',width:'60%' }}><TabDescription data={descriptionData} /> <HRBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
-      {activeTab === 'LineManager' && <div style={{ display: 'flex' ,width:'60%'}}><TabDescription data={descriptionData} /><LineManagerBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
-      {activeTab === 'Employee' && <div style={{ display: 'flex',width:'60%' }}><TabDescription data={descriptionData} /><EmployeeBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      {activeTab === 'HR' && <div style={{ display: 'flex', width: '77%' }}><TabDescription data={hrDescriptionData} /> <HRBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      {activeTab === 'LineManager' && <div style={{ display: 'flex', width: '77%' }}><TabDescription data={lineManagerDescriptionData} /><LineManagerBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      {activeTab === 'Employee' && <div style={{ display: 'flex', width: '77%' }}><TabDescription data={employeeDescriptionData} /><EmployeeBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
       <WhyIntrodo />
       <div className="vertical-text">Schedule a Demo</div>
       <div className="chat-circle">
