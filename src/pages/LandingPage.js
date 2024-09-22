@@ -17,18 +17,39 @@ import { ReactComponent as EmpPrgrmArrow } from '../assets/icons/emp-programming
 import { ReactComponent as EmpEdit } from '../assets/icons/emp-edit-2.svg';
 
 
-const TabDescription = ({ data = [] }) => {
+const TabDescription = ({ data = [], borderColor }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginRight: '7%',width:'19%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginRight: '7%', width: '22%' }}>
       {data.map((item) => (
-        <div style={{display:'flex', textAlign:'left',borderTop: item.id === 2 ? '1px solid' : '', borderBottom: item.id === 2 ? '1px solid' : '', paddingTop: '20%', paddingBottom: '20%' }} key={item.id}>
-          <div style={{marginRight:'10px'}}>{item.icon}</div>
-          <div>{item.desc}</div>
+        <div
+          style={{
+            display: 'flex',
+            textAlign: 'left',
+            borderTop: item.id === 2 ? `1px solid ${borderColor}` : '',
+            borderBottom: item.id === 2 ? `1px solid ${borderColor}` : '',
+            paddingTop: '20%',
+            paddingBottom: '20%',
+          }}
+          key={item.id}
+        >
+          <div style={{ marginRight: '10px' }}>{item.icon}</div>
+          <div style={{
+            fontFamily: 'MonaSansMedium', 
+            fontWeight: 600, 
+            fontSize: '16px', 
+            lineHeight: '24px', 
+            letterSpacing: '0.02em', 
+            color: 'rgba(54, 24, 99, 1)' 
+          }}>
+            {item.desc}
+          </div>
         </div>
       ))}
     </div>
   );
 };
+
+
 
 const hrDescriptionData = [
   { id: 1, desc: 'Streamline Workforce Management',icon:<HrMsg/> },
@@ -112,9 +133,24 @@ const LandingPage = () => {
       <h2 className="empower-title">EMPOWER EVERY ROLE</h2>
       <h1 className="benefits-title">Triple The Benefits!</h1>
       <TabBar tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
-      {activeTab === 'HR' && <div style={{ display: 'flex', width: '77%' }}><TabDescription data={hrDescriptionData} /> <HRBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
-      {activeTab === 'LineManager' && <div style={{ display: 'flex', width: '77%' }}><TabDescription data={lineManagerDescriptionData} /><LineManagerBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
-      {activeTab === 'Employee' && <div style={{ display: 'flex', width: '77%' }}><TabDescription data={employeeDescriptionData} /><EmployeeBoxContainer tabs={tabs} activeTab={activeTab} /></div>}
+      {activeTab === 'HR' && (
+        <div style={{ display: 'flex', width: '77%' }}>
+          <TabDescription data={hrDescriptionData} borderColor={tabs.HR.selectedColor} />
+          <HRBoxContainer tabs={tabs} activeTab={activeTab} />
+        </div>
+      )}
+      {activeTab === 'LineManager' && (
+        <div style={{ display: 'flex', width: '77%' }}>
+          <TabDescription data={lineManagerDescriptionData} borderColor={tabs.LineManager.selectedColor} />
+          <LineManagerBoxContainer tabs={tabs} activeTab={activeTab} />
+        </div>
+      )}
+      {activeTab === 'Employee' && (
+        <div style={{ display: 'flex', width: '77%' }}>
+          <TabDescription data={employeeDescriptionData} borderColor={tabs.Employee.selectedColor} />
+          <EmployeeBoxContainer tabs={tabs} activeTab={activeTab} />
+        </div>
+      )}
       <WhyIntrodo />
       <div className="vertical-text">Schedule a Demo</div>
       <div className="chat-circle">
