@@ -1,5 +1,5 @@
 import React from 'react';
-import './TabBar.css';
+import './ComponentStyles/TabBar.css';
 import { ReactComponent as HrTabIcon } from '../assets/icons/hr-tab.svg';
 import { ReactComponent as LineTabIcon } from '../assets/icons/line-tab.svg';
 import { ReactComponent as EmpTabIcon } from '../assets/icons/employe-tab.svg';

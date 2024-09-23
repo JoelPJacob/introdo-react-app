@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProgressBar.css';
+import './ComponentStyles/ProgressBar.css';
 
 const ProgressBar = ({ progress = 0, height = '6px', color = '#4caf50', backgroundColor = '#ddd', borderRadius = '5px' }) => {
   return (

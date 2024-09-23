@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './Footer.css';
+import './ComponentStyles/Footer.css';
 import DownArrow from '../assets/icons/down-arrow-white-icon.svg';
 import Logo from '../assets/icons/app-logo.svg';
 import InputBox from './InputBox';

@@ -1,5 +1,5 @@
 import React from 'react';
-import './LineManagerBoxContainer.css';
+import './ComponentStyles/LineManagerBoxContainer.css';
 
 const LineManagerBoxContainer = ({ tabs, activeTab }) => {
     return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './InputBox.css';
+import './ComponentStyles/InputBox.css';
 import RightArrow from '../assets/icons/right-arrow-icon.svg';
 
 const InputBox = ({ onSubscribe }) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './WhyIntrodo.css';
+import './ComponentStyles/WhyIntrodo.css';
 import Flag1 from '../assets/images/FlagAED.png';
 import Flag2 from '../assets/images/FlagSAD.png';
 import Flag3 from '../assets/images/FlagOMG.png';

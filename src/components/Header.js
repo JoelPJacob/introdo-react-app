@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './ComponentStyles/Header.css';
 import DownArrow from '../assets/icons/down-arrow-icon.svg';
 import Logo from '../assets/icons/app-logo.svg';
 import { ReactComponent as ProfileIcon } from '../assets/icons/avatar-logo.svg';

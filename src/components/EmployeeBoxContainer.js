@@ -1,5 +1,5 @@
 import React from 'react';
-import './EmployeeBoxContainer.css';
+import './ComponentStyles/EmployeeBoxContainer.css';
 
 const EmployeeBoxContainer = ({ tabs, activeTab }) => {
   return (

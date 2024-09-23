@@ -1,5 +1,5 @@
 import React from 'react';
-import './HRBoxContainer.css';
+import './ComponentStyles/HRBoxContainer.css';
 
 const HRBoxContainer = ({ tabs, activeTab }) => {
   return (
