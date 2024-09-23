@@ -37,7 +37,7 @@ const InputBox = ({ onSubscribe }) => {
       <button className="subscribe-button" onClick={handleSubscribe}>
         <img src={RightArrow} alt="Subscribe" />
       </button>
-      {emailError && <p className="error-message">{emailError}</p>}
+      {/* {emailError && <p className="error-message">{emailError}</p>} */}
     </div>
   );
 };
