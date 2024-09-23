@@ -30,5 +30,11 @@ code {
    url("./fonts/MonaSans/MonaSans-Light.ttf") format("truetype");
   font-weight: 600;
  }
+ @font-face {
+  font-family: "MonaSansBold";
+  src: local("MonaSans-SemiBold"),
+   url("./fonts/MonaSans/MonaSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+ }
  
  

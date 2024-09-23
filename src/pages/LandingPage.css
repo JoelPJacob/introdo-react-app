@@ -29,8 +29,8 @@
 }
 
 /* Style for each tab button */
-.tab-container button {
-  padding: 10px 20px;
+/* .tab-container button {
+  padding: 10px 10px;
   margin: 0 10px;
   border: 2px solid rgba(58, 134, 255, 1);
   border-radius: 20px;
@@ -39,7 +39,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
 /* Active tab button */
 .tab-container .active-tab {
