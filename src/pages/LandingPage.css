@@ -1,3 +1,5 @@
+/* Landing page css */
+
 /* Tab button container */
 .tab-container {
   display: flex;
@@ -29,19 +31,6 @@
   color: rgba(54, 24, 99, 1);
 }
 
-/* Style for each tab button */
-/* .tab-container button {
-  padding: 10px 10px;
-  margin: 0 10px;
-  border: 2px solid rgba(58, 134, 255, 1);
-  border-radius: 20px;
-  background-color: white;
-  color: rgba(58, 134, 255, 1);
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-} */
-
 /* Active tab button */
 .tab-container .active-tab {
   background-color: rgba(58, 134, 255, 1);
@@ -54,6 +43,7 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
+  width: 100%;
 }
 
 /* Vertical Text (Schedule a Demo) */
@@ -103,7 +93,28 @@ hr {
   height: 48px;
   background: linear-gradient(45deg, rgba(252, 23, 119, 1), rgba(58, 134, 255, 1));
   border-radius: 50%;
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+@media only screen and (max-width: 728px) {
+
+  .landing-page {
+    padding: 10px;
+  }
+
+.landing-desc{
+  transform: rotate(270deg);
+  transition: transform 0.5s ease;
+  border: none !important;
+  width: 20%;
+}
+
+.landing-desc-container{
+  justify-content: space-around;
+  padding-top: 17%;
+  padding-bottom: 2%;
+
+}
 }

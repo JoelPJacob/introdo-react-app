@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Introdo Project - Techware Lab Technical Evaluation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Developer**: Joel P Jacob  
+**Role**: Front End Developer  
+**Project**: Technical Evaluation for Techware Lab
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+This project was developed as part of the technical evaluation for the **Front End Developer** role at **Techware Lab**. The goal is to create two specific interactive features for a website called **Introdo**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Tab Switching Feature**  
+2. **Unlock The Perks Section**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features Implemented
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Tab Switching Feature
 
-### `npm run build`
+- **Auto-Switch Mechanism**:  
+  Tabs will automatically switch every 5 seconds, providing a seamless transition between different sections.
+  
+- **Manual Interaction**:  
+  Users can manually switch between tabs. Upon manual interaction, the auto-switch timer will reset, ensuring the user has 5 seconds before the next automatic switch.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Visual Feedback**:  
+  The active tab is highlighted with smooth transitions to enhance user experience and make navigation clear.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Unlock The Perks Section
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Timer**:  
+  A countdown timer starts at 14:00 and ends at 14:59, simulating a one-hour duration.
 
-### `npm run eject`
+- **Progress Bar**:  
+  The progress bar is synced with the timer, dynamically filling from 0% at 14:00 to 100% at 14:59, visually indicating the passage of time.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **HTML5**  
+- **CSS3**  
+- **JavaScript**  
+- **React.js** 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Instructions to Run the Project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    git clone [repository-url]
+    ```
 
-### Code Splitting
+2. Navigate to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    cd introdo-project
+    ```
 
-### Analyzing the Bundle Size
+3. Install dependencies (if applicable):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```bash
+    npm install
+    ```
 
-### Making a Progressive Web App
+4. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```bash
+    npm start
+    ```
 
-### Advanced Configuration
+5. Open the browser at `http://localhost:3000` to view the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Usage Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Tab Switching Feature:
+- Tabs will auto-switch every 5 seconds.
+- You can click on any tab to switch manually. The 5-second timer will reset after each manual switch.
+- The active tab will be visually highlighted.
 
-### `npm run build` fails to minify
+### Unlock The Perks Section:
+- The timer will begin at 14:00 and will run until 14:59.
+- A progress bar will indicate the elapsed time, filling up as the countdown proceeds.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Future Improvements
+
+- Add mobile responsiveness for a better experience across all device sizes.
+- Include accessibility features such as keyboard navigation and screen reader support.
+- Refine animations for smoother transitions.
+
+---
+
+## Contact Information
+
+For any queries or feedback, please feel free to contact me at joelpjacob3@gmail.com

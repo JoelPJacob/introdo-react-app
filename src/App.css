@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -66,7 +69,8 @@ footer {
     margin: 10px 0;
   }
 
-  header, footer {
+  header,
+  footer {
     text-align: center;
   }
 }
@@ -76,7 +80,62 @@ footer {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.global-header {
+  display: block;
+}
+
+.global-footer {
+  display: block;
+}
+
+.mobile-header {
+  display: none;
+  position: 'fixed';
+  width: '100%';
+  background-color: '#fff';
+  z-index: 1000
+}
+
+.landing {
+  padding-top: 0;
+}
+
+.mobile-footer {
+  display: none;
+}
+
+@media only screen and (max-width: 728px) {
+  .global-header {
+    display: none;
+  }
+
+  .global-footer {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+  }
+
+  .mobile-footer {
+    display: block;
+  }
+
+  .landing {
+    padding-top: 50%;
+  }
+
+  .global-footer {
+    display: none;
+  }
+
+
+
 }

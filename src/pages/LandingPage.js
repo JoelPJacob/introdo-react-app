@@ -16,12 +16,13 @@ import { ReactComponent as EmpMsg } from '../assets/icons/emp-edit-2.svg';
 import { ReactComponent as EmpPrgrmArrow } from '../assets/icons/emp-programming-arrows.svg';
 import { ReactComponent as EmpEdit } from '../assets/icons/emp-edit-2.svg';
 
-
+// Component for displaying descriptions under each tab
 const TabDescription = ({ data = [], borderColor }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', marginRight: '7%', width: '22%' }}>
+    <div className='landing-desc-container' style={{ display: 'flex', flexDirection: 'column', marginRight: '7%', width: '22%' }}>
       {data.map((item) => (
         <div
+          className='landing-desc'
           style={{
             display: 'flex',
             textAlign: 'left',
@@ -49,27 +50,33 @@ const TabDescription = ({ data = [], borderColor }) => {
   );
 };
 
+// Data for HR tab descriptions
 const hrDescriptionData = [
   { id: 1, desc: 'Streamline Workforce Management', icon: <HrMsg /> },
   { id: 2, desc: 'Smooth Employee Onboarding', icon: <HrPrgrmArrow /> },
   { id: 3, desc: 'Enhance Internal Communication', icon: <HrEdit /> }
-]
+];
 
+// Data for Line Manager tab descriptions
 const lineManagerDescriptionData = [
   { id: 1, desc: 'Streamline Workforce Management', icon: <LineMsg /> },
   { id: 2, desc: 'Smooth Employee Onboarding', icon: <LinePrgrmArrow /> },
   { id: 3, desc: 'Enhance Internal Communication', icon: <LineEdit /> }
-]
+];
 
+// Data for Employee tab descriptions
 const employeeDescriptionData = [
   { id: 1, desc: 'Streamline Workforce Management', icon: <EmpMsg /> },
   { id: 2, desc: 'Smooth Employee Onboarding', icon: <EmpPrgrmArrow /> },
   { id: 3, desc: 'Enhance Internal Communication', icon: <EmpEdit /> }
-]
+];
+
+// Main component for the Landing Page
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState('HR');
   let autoSwitchInterval;
 
+  // Data for each tab including content and styling colors
   const tabs = {
     HR: {
       title: 'For HR Managers',
@@ -109,21 +116,24 @@ const LandingPage = () => {
     }
   };
 
+  // Function to automatically switch tabs every 5 seconds
   const switchTabs = () => {
-    const tabKeys = Object.keys(tabs);
-    const currentIndex = tabKeys.indexOf(activeTab);
-    const nextIndex = (currentIndex + 1) % tabKeys.length;
-    setActiveTab(tabKeys[nextIndex]);
+    const tabKeys = Object.keys(tabs); // Get all tab keys
+    const currentIndex = tabKeys.indexOf(activeTab); // Find the index of the current tab
+    const nextIndex = (currentIndex + 1) % tabKeys.length; // Calculate the next tab index
+    setActiveTab(tabKeys[nextIndex]); // Set the next tab as active
   };
 
+  // Function to handle manual tab click and stop auto-switching
   const handleTabClick = (tab) => {
     clearInterval(autoSwitchInterval);
     setActiveTab(tab);
   };
 
+  // useEffect hook to set the auto-switching functionality when the component mounts
   useEffect(() => {
-    autoSwitchInterval = setInterval(switchTabs, 50000000);
-    return () => clearInterval(autoSwitchInterval);
+    autoSwitchInterval = setInterval(switchTabs, 5000); // Set auto-switch interval to 50 seconds
+    return () => clearInterval(autoSwitchInterval); // Clear interval when the component unmounts
   }, [activeTab]);
 
   return (
@@ -137,20 +147,30 @@ const LandingPage = () => {
           <HRBoxContainer tabs={tabs} activeTab={activeTab} />
         </div>
       )}
+
+      {/* Content for Line Manager tab */}
       {activeTab === 'LineManager' && (
         <div style={{ display: 'flex', width: '77%' }}>
           <TabDescription data={lineManagerDescriptionData} borderColor={tabs.LineManager.selectedColor} />
           <LineManagerBoxContainer tabs={tabs} activeTab={activeTab} />
         </div>
       )}
+
+      {/* Content for Employee tab */}
       {activeTab === 'Employee' && (
         <div style={{ display: 'flex', width: '77%' }}>
           <TabDescription data={employeeDescriptionData} borderColor={tabs.Employee.selectedColor} />
           <EmployeeBoxContainer tabs={tabs} activeTab={activeTab} />
         </div>
       )}
+
+      {/* WhyIntrodo component section */}
       <WhyIntrodo />
+
+      {/* Vertical text for demo scheduling */}
       <div className="vertical-text">Schedule a Demo</div>
+
+      {/* Chat button */}
       <div className="chat-circle">
         <ChatIcon />
       </div>

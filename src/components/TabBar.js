@@ -21,12 +21,19 @@ const TabBar = ({ tabs, activeTab, onTabClick }) => {
     }
   };
 
+  const borderColorObj={
+    HR:'mob-tab-active-hr',
+    LineManager:'mob-tab-active-LineManager',
+    Employee:'mob-tab-active-Employee',
+
+  }
+
   return (
     <div className="tab-container">
       {Object.keys(tabs).map((tab) => (
         <button
           key={tab}
-          className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+          className={`tab-button ${activeTab === tab ? `active ${borderColorObj[activeTab]}` : 'mob-not-activ'} mob-tab`}
           style={{
             backgroundColor: activeTab === tab ? tabs[tab].selectedColor : 'white',
           }}
