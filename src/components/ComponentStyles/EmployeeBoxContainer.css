@@ -20,6 +20,7 @@
     left: -50px;
     z-index: 0;
     padding: 45px;
+    height: 100%;
 }   
 
 .employee-box-container .employee-layer2 {
@@ -27,6 +28,7 @@
     left: -15px;
     z-index: 1;
     padding: 45px;
+    height: 100%;
 }
 
 .employee-box-container .employee-layer3 {
@@ -37,6 +39,7 @@
     border: 1px solid rgba(255, 197, 138, 1);
     left: 20px;
     padding: 45px;
+    height: 100%;
 }
 
 /* Paragraph text styling */
@@ -54,4 +57,20 @@
     height: 1px;
     border: none;
     margin: 15px 0; 
+}
+
+@media only screen and (max-width: 728px) {
+    .employee-box-container .employee-layer3 {padding: 20px;height: 100%;}
+    .employee-box-container .employee-layer1 {
+      top: 15px;
+      left: 10px;
+      height: 100%;
+    
+    }
+    
+    .employee-box-container .employee-layer2 {
+      top: 10px;
+      left: 15px;
+      height: 100%;
+    }
 }

@@ -115,7 +115,7 @@ const Footer = () => {
             <InputBox onSubscribe={handleSubscribe} />
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', marginTop: '40px', width: '12%', justifyContent: 'space-around', paddingLeft: '80px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', marginTop: '40px', width: '12%', justifyContent: 'space-around' }}>
             <Fb />
             <Insta />
             <LinkedIn />
