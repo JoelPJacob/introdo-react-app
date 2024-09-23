@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './LandingPage.css';
 import TabBar from '../components/TabBar';
 import HRBoxContainer from '../components/HRBoxContainer';
@@ -16,7 +16,6 @@ import { ReactComponent as EmpMsg } from '../assets/icons/emp-edit-2.svg';
 import { ReactComponent as EmpPrgrmArrow } from '../assets/icons/emp-programming-arrows.svg';
 import { ReactComponent as EmpEdit } from '../assets/icons/emp-edit-2.svg';
 
-// Component for displaying descriptions under each tab
 const TabDescription = ({ data = [], borderColor }) => {
   return (
     <div className='landing-desc-container' style={{ display: 'flex', flexDirection: 'column', marginRight: '7%', width: '22%' }}>
@@ -74,10 +73,10 @@ const employeeDescriptionData = [
 // Main component for the Landing Page
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState('HR');
-  let autoSwitchInterval;
+  const autoSwitchInterval = useRef(null); // Create a ref for the interval
 
-  // Data for each tab including content and styling colors
-  const tabs = {
+  // useMemo to memoize the tabs object
+  const tabs = useMemo(() => ({
     HR: {
       title: 'For HR Managers',
       content: [
@@ -114,27 +113,27 @@ const LandingPage = () => {
       layer3Color: 'rgba(255, 255, 255, 1)',
       selectedColor: 'rgba(255, 129, 0, 1)',
     }
-  };
+  }), []); 
 
-  // Function to automatically switch tabs every 5 seconds
-  const switchTabs = () => {
-    const tabKeys = Object.keys(tabs); // Get all tab keys
-    const currentIndex = tabKeys.indexOf(activeTab); // Find the index of the current tab
-    const nextIndex = (currentIndex + 1) % tabKeys.length; // Calculate the next tab index
-    setActiveTab(tabKeys[nextIndex]); // Set the next tab as active
-  };
+  // useCallback to memoize switchTabs
+  const switchTabs = useCallback(() => {
+    const tabKeys = Object.keys(tabs);
+    const currentIndex = tabKeys.indexOf(activeTab); 
+    const nextIndex = (currentIndex + 1) % tabKeys.length; 
+    setActiveTab(tabKeys[nextIndex]);
+  }, [activeTab, tabs]);
 
   // Function to handle manual tab click and stop auto-switching
   const handleTabClick = (tab) => {
-    clearInterval(autoSwitchInterval);
+    clearInterval(autoSwitchInterval.current);
     setActiveTab(tab);
   };
 
   // useEffect hook to set the auto-switching functionality when the component mounts
   useEffect(() => {
-    autoSwitchInterval = setInterval(switchTabs, 5000); // Set auto-switch interval to 50 seconds
-    return () => clearInterval(autoSwitchInterval); // Clear interval when the component unmounts
-  }, [activeTab]);
+    autoSwitchInterval.current = setInterval(switchTabs, 5000); // Set auto-switch interval to 5 seconds
+    return () => clearInterval(autoSwitchInterval.current); // Clear interval when the component unmounts
+  }, [switchTabs]); // Include switchTabs in the dependency array
 
   return (
     <div className="landing-page">

@@ -106,7 +106,7 @@ const MobileHeader = () => {
                 </div>
             </nav>
             <div className={`mob-desc-box ${isDesc ? 'disable-desc' : ''}`}>
-                <p>
+                <p style={{fontFamily:'MonaSansLight',fontSize:'12.8px',fontWeight:'400',color:'rgba(28, 14, 60, 1)',lineHeight:'19.2px'}}>
                     Happy Employees, Effortless HR: Experience the Introdo Advantage.
                     <span className="bold-text"> Try it for Free!</span>
                 </p>
