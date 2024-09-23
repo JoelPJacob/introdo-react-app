@@ -4,7 +4,6 @@
   background-color: #ddd;
   border-radius: 10px;
   overflow: hidden;
-  /* Ensures the progress bar remains rounded */
 }
 
 .progress-bar {
@@ -12,5 +11,4 @@
   background: linear-gradient(to right, rgba(252, 23, 119, 1), rgba(58, 134, 255, 1));
   border-radius: inherit;
   transition: width 0.25s ease-in-out;
-  /* Smooth transition */
 }

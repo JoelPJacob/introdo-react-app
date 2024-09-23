@@ -193,13 +193,12 @@
   .dropdown-item {
     padding: 10px;
     cursor: pointer;
-    text-align: left;
     color: rgba(111, 104, 129, 1);
     border-radius: 8px;
     font-family: 'MonaSansBold', sans-serif;
     font-weight: 200;
     font-size: 12.8px;
-    text-align: center;
+    text-align: center !important;
   }
  
   
@@ -231,4 +230,14 @@
     width: 10px;
     height: 10px;
   }
-  
+ 
+  .footer__label {
+    font-family: "MonaSansBold", sans-serif;
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 9.8px;
+    letter-spacing: 12%;
+    color: rgba(191, 186, 255, 1);
+    margin-left: 5px; 
+    vertical-align: super; 
+  }

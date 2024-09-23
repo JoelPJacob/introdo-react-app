@@ -58,6 +58,7 @@ const cardDataArray = [
 // PerkCards Component
 const PerkCards = ({ heading = '', desc = '', flagData = [], icons = [], gradientClass = '', bgImage, bgImagePosition, imgDivStyle, imgStyle, descStyle, ...rest }) => (
   <div className={`why-intro-box ${gradientClass}`} style={{ margin: '5px', ...rest }}>
+    {/* Conditionally rendering the image based on position */}
     {(bgImagePosition === 'top' || bgImagePosition === 'left') &&
       <div style={imgDivStyle}><img src={bgImage} style={imgStyle} alt={heading} /></div>
     }
@@ -75,6 +76,7 @@ const PerkCards = ({ heading = '', desc = '', flagData = [], icons = [], gradien
               <span style={{ fontSize: '8.67px', color: 'rgba(23, 12, 52, 1)', fontWeight: '400', fontFamily: 'MonaSansMedium' }}>{amount}</span>
             </div>
           ))}
+          {/* Adding background layers for visual effects */}
           <div className="payroll-card-background"></div>
           <div className="payroll-card-background-light"></div>
         </div>
@@ -98,6 +100,7 @@ const UserDetails = ({ name = 'Fatima Saleem', date = 'Aug 07, 2024 - Aug 15, 20
       marginBottom: '5%',
       borderBottom: '1px solid #EDE9F3'
     }}>
+      {/* User icon and details */}
       <div>
         <Fathima />
       </div>
@@ -114,6 +117,7 @@ const SplitedPerkCard = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      {/* Top section with gradient and progress display */}
       <div className='smart-insights-top-gradient' style={{ borderRadius: '32px', position: 'relative' }}>
         <div style={{
           position: 'absolute',
@@ -129,10 +133,12 @@ const SplitedPerkCard = () => {
           alignItems: 'center',
           justifyContent: 'center'
         }}>
+          {/* Display progress percentage */}
           <div style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(235, 243, 255, 1)', fontFamily: 'MonaSansBold' }}>{Math.round(progressPercentage)}%</div>
           <UpArrow style={{ marginLeft: '8px' }} />
         </div>
         <div style={{ backgroundColor: '#fff', borderTopRightRadius: '20px', borderTopLeftRadius: '20px', padding: '10%', marginTop: '35%' }}>
+          {/* User details and Timer component */}
           <UserDetails />
           <TimerComponent
             progressPercentage={progressPercentage}
@@ -140,6 +146,7 @@ const SplitedPerkCard = () => {
           />
         </div>
       </div>
+      {/* Bottom section with insights information */}
       <div className='smart-insights-gradient' style={{ borderRadius: '32px' }}>
         <div style={{ fontSize: '31.25px', fontWeight: 600, color: '#241042', marginBottom: '16px', fontFamily: 'Archivo' }}>Smart Insights</div>
         <div style={{ fontSize: '16px', color: '#433A5B', fontFamily: 'MonaSansMedium', lineHeight: "24px" }}>Craft customized reports and dashboards to steer data-driven decisions.
@@ -150,6 +157,8 @@ const SplitedPerkCard = () => {
     </div>
   )
 }
+
+// Configuration objects for dynamic class and style management
 const gradientClassObj = {
   1: 'payroll-gradient',
   2: 'payroll-gradient',
@@ -190,6 +199,7 @@ const imgPositions = {
   4: 'right',
   5: 'left'
 }
+
 // Main Component: WhyIntrodo
 const WhyIntrodo = () => {
   return (
@@ -198,6 +208,7 @@ const WhyIntrodo = () => {
       <h1 className="why-intro-benefits-title">Unlock The Perks!</h1>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', width: '80%' }}>
+          {/* Rendering different card components based on data */}
           {cardDataArray.map(({ id, heading, description, flagData, icons }) => (
             <div className='perk-card-container' style={{ width: id <= 3 ? '352px' : '48%', marginTop: '20px' }} key={id}>
               {id !== 2 ?

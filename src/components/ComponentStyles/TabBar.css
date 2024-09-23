@@ -25,6 +25,8 @@
   border-color: transparent;
   color: rgba(255, 255, 255, 1);
   font-family: 'Archivo';
+  padding: 5px 5px 5px 5px;
+    padding-right: 20px;
 }
 
 .tab-button:not(.active) {
@@ -32,6 +34,8 @@
   color: rgba(54, 24, 99, 1);
   border-width: 1px;
   font-family: 'Archivo';
+  padding: 5px 5px 5px 5px;
+    padding-right: 20px;
 }
 
 .tab-icon {

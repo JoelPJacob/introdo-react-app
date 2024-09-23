@@ -13,14 +13,13 @@ import { ReactComponent as Fb } from '../assets/icons/facebook.svg';
 import { ReactComponent as Insta } from '../assets/icons/instagram.svg';
 import { ReactComponent as LinkedIn } from '../assets/icons/linkdedin.svg';
 
-// Language selector component
 const LanguageSelector = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
-  const [selectedLanguage, setSelectedLanguage] = useState('EN'); 
-  const dropdownRef = useRef(null); 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen); 
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   // Close the dropdown if a click is detected outside
@@ -38,8 +37,8 @@ const LanguageSelector = () => {
   }, [dropdownRef]);
 
   const handleLanguageSelect = (language) => {
-    setSelectedLanguage(language); // Update selected language
-    setIsDropdownOpen(false); // Close dropdown after selection
+    setSelectedLanguage(language); 
+    setIsDropdownOpen(false); 
   };
 
   const languages = [
@@ -70,21 +69,21 @@ const LanguageSelector = () => {
 // Main Footer component
 const Footer = () => {
   const handleSubscribe = (email) => {
-    console.log('Subscribed with:', email); 
+    console.log('Subscribed with:', email);
   };
 
   // Lists products
   const products = [
-    "Core HR",
-    "Employee Management",
-    "Leave Management",
-    "Time & Attendance",
-    "Payroll Management",
-    "People Analytics",
-    "Recruitment",
-    "Performance Management",
+    { name: "Core HR", label: "" },
+    { name: "Employee Management", label: "" },
+    { name: "Leave Management", label: "" },
+    { name: "Time & Attendance", label: "" },
+    { name: "Payroll Management", label: "" },
+    { name: "People Analytics", label: "" },
+    { name: "Recruitment", label: "NEW" },
+    { name: "Performance Management", label: "COMING SOON" },
   ];
-// Lists resources
+  // Lists resources
   const resources = [
     "All Resources",
     "Blogs",
@@ -92,7 +91,7 @@ const Footer = () => {
     "Product Videos",
     "HR Glossary",
   ];
-// Lists platform
+  // Lists platform
   const platform = [
     "Log In",
     "Schedule a Demo",
@@ -115,21 +114,24 @@ const Footer = () => {
             <InputBox onSubscribe={handleSubscribe} />
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', marginTop: '40px', width: '12%', justifyContent: 'space-around' }}>
+          <div style={{ display: 'flex', alignItems: 'center', marginTop: '40px', width: '12%', justifyContent: 'space-around', marginLeft: '100px' }}>
             <Fb />
             <Insta />
             <LinkedIn />
           </div>
-          <LanguageSelector /> 
+          <LanguageSelector />
         </div>
 
         <div className="footer__info-sections">
           <div className="footer__info-section">
             <h3 className="footer__section-title">Products</h3>
             <ul className="footer__info-list">
-              {products.map((item, index) => (
-                <li key={index} className="footer__info-item">{item}</li>
-              ))}
+            {products.map(({ name, label }, index) => (
+            <li key={index} className="footer__info-item">
+              {name}
+              {label && <span className="footer__label"> {label}</span>}
+            </li>
+          ))}
             </ul>
           </div>
           <div className="footer__info-section">

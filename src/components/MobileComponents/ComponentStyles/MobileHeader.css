@@ -21,6 +21,9 @@
     margin-left: 0.5rem;
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: 'MonaSansBold', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
   }
  
   /* Drawer menu styles */
@@ -93,7 +96,6 @@
   .mob-dropdown-item {
     padding: 10px;
     cursor: pointer;
-    text-align: left;
     color: rgba(111, 104, 129, 1);
     border-radius: 8px;
     font-family: 'MonaSansBold', sans-serif;
@@ -110,8 +112,8 @@
   }
 
   .mob-button {
-    border-radius: 50px;
-    padding: 1px 20px 1px 20px;
+    border-radius: 100px;
+    padding: 6px 10px 6px 10px;
     background-color: rgba(255, 255, 255, 1);
     color: rgba(23, 12, 52, 1);
     font-size: 12.8px;
