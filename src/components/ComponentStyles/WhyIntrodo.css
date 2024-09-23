@@ -121,10 +121,9 @@ h3 {
 .legacy-harmony {
   padding: 0 !important;
   overflow: hidden;
-  background: linear-gradient(to bottom right,
-      #5E9CFF,
-      #69489A);
+  background: linear-gradient(to bottom right, #69489A , #5E9CFF 70%);
 }
+
 
 .legacy-harmony-title {
   font-family: 'Archivo', sans-serif;
