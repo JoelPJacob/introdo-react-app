@@ -1,4 +1,5 @@
 /* HRBoxContainer styling */
+
 .hr-box-container {
   position: relative;
   width: 550px;
@@ -19,6 +20,8 @@
   padding: 45px;
   left: 100px;
   z-index: 0;
+  height: 100%;
+
 }
 
 .hr-layer2 {
@@ -26,6 +29,7 @@
   top: 50px;
   left: 55px;
   z-index: 1;
+  height: 100%;
 }
 
 .hr-layer3 {
@@ -34,6 +38,8 @@
   padding: 45px;
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(164, 199, 255, 1);
+  height: 100%;
+
 }
 
 /* Paragraph text styling */
@@ -51,4 +57,21 @@ hr.hr-custom-line {
   height: 1px;
   border: none;
   margin: 15px 0;
+}
+
+@media only screen and (max-width: 728px) {
+  .hr-layer3 {padding: 20px;height: 100%;}
+  .hr-layer1 {
+    top: 11px;
+    left: 10px;
+    height: 100%;
+  
+  }
+  
+  .hr-layer2 {
+    top: 6px;
+    left: 3px;
+    height: 100%;
+  }
+  
 }

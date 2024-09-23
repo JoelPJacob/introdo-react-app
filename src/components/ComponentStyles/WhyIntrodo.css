@@ -66,7 +66,9 @@ h3 {
 
 .payroll-gradient {
   background: linear-gradient(135deg, rgba(255, 174, 92, 1), rgba(253, 65, 144, 1));
-  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
 }
 
 .smart-insights-top-gradient {
@@ -213,24 +215,24 @@ h3 {
 
 .payroll-card-background {
   position: absolute;
-  width: 247.1px;
+  width: 220px;
   height: 23px;
   background-color: rgba(255, 129, 0, 1);
   border-top-left-radius: 19.23px;
   border-top-right-radius: 19.23px;
-  top: -16%;
-  left: 24px;
+  top: -17%;
+  left: 15px;
 }
 
 .payroll-card-background-light {
   position: absolute;
-  width: 200px;
+  width: 180px;
   height: 23px;
   background-color: #FF8100;
   border-top-left-radius: 19.23px;
   border-top-right-radius: 19.23px;
   top: -30%;
-  left: 45px;
+  left: 33px;
   opacity: 0.7;
 }
 
@@ -283,4 +285,11 @@ h3 {
 
 .legacy-harmony-desc {
   padding: 20px;
+}
+
+@media only screen and (max-width: 728px) {
+
+  .perk-card-container {
+    width: 100% !important;
+  }
 }

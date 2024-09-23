@@ -8,6 +8,12 @@ import MobileHeader from './components/MobileComponents/MobileHeader';
 import MobileFooter from './components/MobileComponents/MobileFooter';
 
 function App() {
+
+  React.useEffect(() => {
+    // Scroll to the top of the page on component mount (refresh)
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="App">
       <div className='global-header' style={{ position: 'fixed', width: '100%', backgroundColor: '#fff', zIndex: 1000 }}>

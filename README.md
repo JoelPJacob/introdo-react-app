@@ -52,13 +52,13 @@ This project was developed as part of the technical evaluation for the **Front E
 1. Clone the repository:
 
     ```bash
-    git clone [repository-url]
+    git clone https://github.com/JoelPJacob/introdo-react-app.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd introdo-project
+    cd introdo-react-app
     ```
 
 3. Install dependencies (if applicable):

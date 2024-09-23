@@ -28,6 +28,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: 10px;
   }
   
   .drawer-menu {
@@ -72,7 +73,6 @@
     border-radius: 100px;
 
   }
-
 
   .mob-dropdown-menu {
     position: absolute;
@@ -139,4 +139,7 @@
 
 .disable-desc{
     display: none;
+}
+.mob-navbar{
+  padding: 0px !important;
 }
