@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import ProgressBarComponent from './ProgressBarComponent';
 
-const TimerComponent = () => {
+const TimerComponent = ({ progressPercentage, setProgressPercentage }) => {
   const [seconds, setSeconds] = useState(0); // start from 0 seconds
   const totalSeconds = 3600; // 60 minutes * 60 seconds = 3600 seconds
-
+  // const [progressPercentage, setProgressPercentage] = useState(0);
+  // let progressPercentage=0;
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds((prev) => (prev < 3599 ? prev + 1 : 3599)); // Stop at 14:59
+      setSeconds((prev) => {
+        const updatedSeconds = prev < 58 ? prev + 1 : 59; // Stop at 14:59 (899 seconds)
+        setProgressPercentage(((updatedSeconds === 59 ? 60 : updatedSeconds) / 60) * 100); // Calculate progress as a percentage based on updatedSeconds
+        return updatedSeconds;
+      });
     }, 1000);
 
     return () => clearInterval(interval); // Cleanup the interval on unmount
   }, []);
+
 
   // Calculate minutes and seconds
   const minutes = Math.floor(seconds / 60);
@@ -21,12 +27,11 @@ const TimerComponent = () => {
   const formattedTime = `14:${remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}`;
 
   // Progress calculation (percentage of the total time, 0-3599 seconds)
-  const progressPercentage = (seconds / totalSeconds) * 100;
 
   return (
     <div className="timer-container">
-      <h2>Hours Worked</h2>
-      <p className="hours-worked">{formattedTime}</p>
+      <div style={{ color: '#6F6881', fontSize: '10.24px' }}>Hours Worked</div>
+      <p style={{ color: '#170C34', fontWeight: 700, fontSize: '20px' }}>{formattedTime} Hours</p>
       <ProgressBarComponent percentage={progressPercentage} />
     </div>
   );

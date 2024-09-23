@@ -120,7 +120,7 @@
 }
 
 .footer__app-store-img {
-    height: 40px;
+    height: 64px;
     width: auto;
 }
 
@@ -205,7 +205,6 @@
   
   .dropdown-item:hover {
     background-color: #f0f0f0;
-    margin: 5px;
     color: #241042;
     text-align: center;
 

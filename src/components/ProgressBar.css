@@ -1,0 +1,14 @@
+/* ProgressBar.css */
+.progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the progress bar remains rounded */
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: 'linear-gradient(135deg, #FC1777, #3A86FF)' !important;
+    border-radius: inherit;
+    transition: width 0.25s ease-in-out; /* Smooth transition */
+  }
