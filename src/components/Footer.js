@@ -161,6 +161,7 @@ const Footer = () => {
 
         <div className="footer__certification-logos">
           <img src={FooterLogoBsi} alt="BSI Certification" className="footer__certification-logo" />
+          <img src={FooterLogoBsi} alt="BSI Certification" className="footer__certification-logo" />
           <img src={FooterLogoHipaa} alt="HIPAA Certification" className="footer__certification-logo" />
           <img src={FooterLogoGdpr} alt="GDPR Certification" className="footer__certification-logo" />
           <img src={FooterLogoAicpa} alt="AICPA Certification" className="footer__certification-logo" />

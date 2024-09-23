@@ -16,25 +16,25 @@ code {
   font-family: "MonaSansExtraLight";
   src: local("MonaSans-ExtraLight"),
    url("./fonts/MonaSans/MonaSans-ExtraLight.ttf") format("truetype");
-  font-weight:400;
+  /* font-weight:400; */
  }
  @font-face {
   font-family: "MonaSansMedium";
   src: local("MonaSans-Medium"),
    url("./fonts/MonaSans/MonaSans-Medium.ttf") format("truetype");
-  font-weight: 800;
+  /* font-weight: 800; */
  }
  @font-face {
   font-family: "MonaSansLight";
   src: local("MonaSans-Light"),
    url("./fonts/MonaSans/MonaSans-Light.ttf") format("truetype");
-  font-weight: 600;
+  /* font-weight: 600; */
  }
  @font-face {
   font-family: "MonaSansBold";
   src: local("MonaSans-SemiBold"),
    url("./fonts/MonaSans/MonaSans-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+  /* font-weight: 600; */
  }
  
  
