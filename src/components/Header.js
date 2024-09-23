@@ -48,11 +48,11 @@ const Header = () => {
           {/* Right side of navigation (language and login buttons) */}
           <div className="nav-right">
             {/* Language selection button */}
-            <button className="header-button">
+            <button className="header-button language-button">
               EN <img src={DownArrow} alt="Down Arrow" className="button-icon" />
             </button>
             {/* Login button with profile icon */}
-            <button className="header-button">
+            <button className="header-button login-button">
               Log In <ProfileIcon className="profile-icon" />
             </button>
           </div>

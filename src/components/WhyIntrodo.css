@@ -37,7 +37,7 @@ h3{
 
 .why-intro-box {
   background: linear-gradient(135deg, #FFBB1A, #FF6347); /* Gradient background */
-  color: white;
+  color: rgba(255, 255, 255, 1);
   border-radius: 20px;
   padding: 20px;
   text-align: left;

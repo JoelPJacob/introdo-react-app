@@ -34,12 +34,12 @@ const TabDescription = ({ data = [], borderColor }) => {
         >
           <div style={{ marginRight: '10px' }}>{item.icon}</div>
           <div style={{
-            fontFamily: 'MonaSansMedium', 
-            fontWeight: 600, 
-            fontSize: '16px', 
-            lineHeight: '24px', 
-            letterSpacing: '0.02em', 
-            color: 'rgba(54, 24, 99, 1)' 
+            fontFamily: 'MonaSansMedium',
+            fontWeight: 600,
+            fontSize: '16px',
+            lineHeight: '24px',
+            letterSpacing: '0.02em',
+            color: 'rgba(54, 24, 99, 1)'
           }}>
             {item.desc}
           </div>
@@ -49,24 +49,22 @@ const TabDescription = ({ data = [], borderColor }) => {
   );
 };
 
-
-
 const hrDescriptionData = [
-  { id: 1, desc: 'Streamline Workforce Management',icon:<HrMsg/> },
-  { id: 2, desc: 'Smooth Employee Onboarding',icon:<HrPrgrmArrow/> },
-  { id: 3, desc: 'Enhance Internal Communication',icon:<HrEdit/> }
+  { id: 1, desc: 'Streamline Workforce Management', icon: <HrMsg /> },
+  { id: 2, desc: 'Smooth Employee Onboarding', icon: <HrPrgrmArrow /> },
+  { id: 3, desc: 'Enhance Internal Communication', icon: <HrEdit /> }
 ]
 
 const lineManagerDescriptionData = [
-  { id: 1, desc: 'Streamline Workforce Management',icon:<LineMsg/> },
-  { id: 2, desc: 'Smooth Employee Onboarding',icon:<LinePrgrmArrow/> },
-  { id: 3, desc: 'Enhance Internal Communication',icon:<LineEdit/> }
+  { id: 1, desc: 'Streamline Workforce Management', icon: <LineMsg /> },
+  { id: 2, desc: 'Smooth Employee Onboarding', icon: <LinePrgrmArrow /> },
+  { id: 3, desc: 'Enhance Internal Communication', icon: <LineEdit /> }
 ]
 
 const employeeDescriptionData = [
-  { id: 1, desc: 'Streamline Workforce Management',icon:<EmpMsg/> },
-  { id: 2, desc: 'Smooth Employee Onboarding',icon:<EmpPrgrmArrow/> },
-  { id: 3, desc: 'Enhance Internal Communication',icon:<EmpEdit/> }
+  { id: 1, desc: 'Streamline Workforce Management', icon: <EmpMsg /> },
+  { id: 2, desc: 'Smooth Employee Onboarding', icon: <EmpPrgrmArrow /> },
+  { id: 3, desc: 'Enhance Internal Communication', icon: <EmpEdit /> }
 ]
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState('HR');
@@ -124,7 +122,7 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
-    // autoSwitchInterval = setInterval(switchTabs, 10000);
+    autoSwitchInterval = setInterval(switchTabs, 5000);
     return () => clearInterval(autoSwitchInterval);
   }, [activeTab]);
 

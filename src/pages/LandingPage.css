@@ -44,7 +44,7 @@
 /* Active tab button */
 .tab-container .active-tab {
   background-color: rgba(58, 134, 255, 1);
-  color: white;
+  color: rgba(255, 255, 255, 1);
 }
 
 /* General style for the page */
@@ -63,12 +63,12 @@
   margin-right: 20px;
   writing-mode: vertical-rl;
   transform: rotate(360deg);
-  font-size: 18px;
-  color: white;
+  font-size: 12.8px;
+  color: rgba(255, 255, 255, 1);
   font-family: 'MonaSansLight';
   font-weight: 400;
   background: linear-gradient(
-    to top left, 
+    /* to top left,  */
     rgba(58, 134, 255, 1) 0%,
     rgba(72, 32, 132, 1) 100%
   );

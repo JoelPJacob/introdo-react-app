@@ -21,7 +21,7 @@ const InputBox = ({ onSubscribe }) => {
       setEmailError('');
       onSubscribe(email);
     } else {
-      setEmailError('Please enter a valid work email.');
+      setEmailError('Please enter a valid email.');
     }
   };
 
