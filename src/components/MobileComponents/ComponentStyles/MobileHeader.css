@@ -112,8 +112,8 @@
   }
 
   .mob-button {
-    border-radius: 50px;
-    padding: 1px 20px 1px 20px;
+    border-radius: 100px;
+    padding: 6px 10px 6px 10px;
     background-color: rgba(255, 255, 255, 1);
     color: rgba(23, 12, 52, 1);
     font-size: 12.8px;
