@@ -3,9 +3,7 @@ import ProgressBarComponent from './ProgressBarComponent';
 
 const TimerComponent = ({ progressPercentage, setProgressPercentage }) => {
   const [seconds, setSeconds] = useState(0); // start from 0 seconds
-  const totalSeconds = 3600; // 60 minutes * 60 seconds = 3600 seconds
-  // const [progressPercentage, setProgressPercentage] = useState(0);
-  // let progressPercentage=0;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((prev) => {
@@ -30,8 +28,8 @@ const TimerComponent = ({ progressPercentage, setProgressPercentage }) => {
 
   return (
     <div className="timer-container">
-      <div style={{ color: '#6F6881', fontSize: '10.24px' }}>Hours Worked</div>
-      <p style={{ color: '#170C34', fontWeight: 700, fontSize: '20px' }}>{formattedTime} Hours</p>
+      <div style={{ color: 'rgba(111, 104, 129, 1)', fontSize: '10.24px',fontFamily:'MonaSansLight' }}>Hours Worked</div>
+      <p style={{ color: '#170C34', fontWeight: 700, fontSize: '20px',fontFamily:'Archivo' }}>{formattedTime} Hours</p>
       <ProgressBarComponent percentage={progressPercentage} />
     </div>
   );

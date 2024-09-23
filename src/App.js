@@ -8,9 +8,13 @@ import './App.css';
 function App() {
   return (
       <div className="App">
+        <div style={{position:'fixed',width:'100%',backgroundColor:'#fff',zIndex:1000}}>
         <Header />
+        </div>
         <LandingPage/>
+        <div>
         <Footer />
+        </div>
       </div>
   );
 }

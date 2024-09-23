@@ -72,7 +72,7 @@ const PerkCards = ({ heading = '', desc = '', flagData = [], icons = [], gradien
             <div className="payroll-card-row" key={id}>
               <img src={flagSrc} alt={`Flag ${id}`} className="flag-icon" />
               {loader}
-              <span>{amount}</span>
+              <span style={{fontSize: '8.67px', color: 'rgba(23, 12, 52, 1)', fontWeight: '400',fontFamily:'MonaSansMedium'}}>{amount}</span>
             </div>
           ))}
           <div className="payroll-card-background"></div>
@@ -102,8 +102,8 @@ const UserDetails = ({ name = 'Fatima Saleem', date = 'Aug 07, 2024 - Aug 15, 20
         <Fathima />
       </div>
       <div style={{ textAlign: 'left' }}>
-        <div style={{ fontSize: '16px', color: '#170C34', fontWeight: '600' }}>{name}</div>
-        <div style={{ fontSize: '10.24px', color: '#6F6881' }}>{`(${date})`}</div>
+        <div style={{ fontSize: '16px', color: 'rgba(23, 12, 52, 1)', fontWeight: '600',fontFamily:'Archivo'}}>{name}</div>
+        <div style={{ fontSize: '10.24px', color: 'rgba(111, 104, 129, 1)', fontWeight: '400',fontFamily:'MonaSansLight',marginTop:'10px'}}>{`(${date})`}</div>
       </div>
     </div>
   )
@@ -129,7 +129,7 @@ const SplitedPerkCard = () => {
           alignItems: 'center',
           justifyContent: 'center'
         }}>
-          <div>{Math.round(progressPercentage)}%</div>
+          <div style={{fontSize: '12px', fontWeight: 600, color: 'rgba(235, 243, 255, 1)',fontFamily:'MonaSansBold'}}>{Math.round(progressPercentage)}%</div>
           <UpArrow style={{ marginLeft: '8px' }} />
         </div>
         <div style={{ backgroundColor: '#fff', borderTopRightRadius: '20px', borderTopLeftRadius: '20px', padding: '10%', marginTop: '35%' }}>
@@ -141,8 +141,8 @@ const SplitedPerkCard = () => {
         </div>
       </div>
       <div className='smart-insights-gradient' style={{ borderRadius: '32px' }}>
-        <div style={{ fontSize: '31.25px', fontWeight: 600, color: '#241042', marginBottom: '16px' }}>Smart Insights</div>
-        <div style={{ fontSize: '16px', color: '#433A5B' }}>Craft customized reports and dashboards to steer data-driven decisions.
+        <div style={{ fontSize: '31.25px', fontWeight: 600, color: '#241042', marginBottom: '16px',fontFamily:'Archivo' }}>Smart Insights</div>
+        <div style={{ fontSize: '16px', color: '#433A5B',fontFamily:'MonaSansMedium',lineHeight:"24px" }}>Craft customized reports and dashboards to steer data-driven decisions.
           All your historic employee data within one end-to-end solution.
         </div>
       </div>
@@ -180,7 +180,7 @@ const imgStyleObj = {
   5: { width: '240%' }
 }
 const descStyleObj = {
-  1: { padding: '40px' },
+  1: { padding: '40px',paddingTop:0 },
   3: { padding: '40px' },
   4: { width: '75%', padding: '40px' },
   5: { width: '75%', padding: '40px' }

@@ -3,7 +3,7 @@
 .tab-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .tab-button {
@@ -18,17 +18,21 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 100px !important;
+  font-family: 'Archivo';
+  font-weight: 600;
 }
 
 .tab-button.active {
   border-color: transparent;
   color: rgba(255, 255, 255, 1);
+  font-family: 'Archivo';
 }
 
 .tab-button:not(.active) {
   border-color: rgba(54, 24, 99, 1);
   color: rgba(54, 24, 99, 1);
   border-width: 1px;
+  font-family: 'Archivo';
 }
 
 .tab-icon {

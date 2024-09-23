@@ -5,24 +5,9 @@ import RightArrow from '../assets/icons/right-arrow-icon.svg';
 
 const InputBox = ({ onSubscribe }) => {
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-  };
-
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-  const handleSubscribe = () => {
-    if (validateEmail(email)) {
-      setEmailError('');
-      onSubscribe(email);
-    } else {
-      setEmailError('Please enter a valid email.');
-    }
   };
 
   return (
@@ -34,7 +19,7 @@ const InputBox = ({ onSubscribe }) => {
         onChange={handleEmailChange}
         className="email-input"
       />
-      <button className="subscribe-button" onClick={handleSubscribe}>
+      <button className="subscribe-button" >
         <img src={RightArrow} alt="Subscribe" />
       </button>
       {/* {emailError && <p className="error-message">{emailError}</p>} */}

@@ -19,7 +19,7 @@ import { ReactComponent as EmpEdit } from '../assets/icons/emp-edit-2.svg';
 
 const TabDescription = ({ data = [], borderColor }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginRight: '7%', width: '22%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', marginRight: '7%', width: '22%' }}>
       {data.map((item) => (
         <div
           style={{
@@ -27,8 +27,8 @@ const TabDescription = ({ data = [], borderColor }) => {
             textAlign: 'left',
             borderTop: item.id === 2 ? `1px solid ${borderColor}` : '',
             borderBottom: item.id === 2 ? `1px solid ${borderColor}` : '',
-            paddingTop: '20%',
-            paddingBottom: '20%',
+            paddingTop: '10%',
+            paddingBottom: '10%',
           }}
           key={item.id}
         >
@@ -122,7 +122,7 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
-    autoSwitchInterval = setInterval(switchTabs, 5000);
+    autoSwitchInterval = setInterval(switchTabs, 50000000);
     return () => clearInterval(autoSwitchInterval);
   }, [activeTab]);
 
