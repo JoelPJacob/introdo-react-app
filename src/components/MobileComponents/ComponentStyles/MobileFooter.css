@@ -120,13 +120,13 @@
 
 .app-store-section {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .app-store-img {
-    width: 120px;
+    width: 150px;
     height: auto;
     margin: 0 10px;
 }
