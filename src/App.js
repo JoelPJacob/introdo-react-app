@@ -36,7 +36,7 @@ function App() {
       </div>
 
       {/* Footer for mobile screens */}
-      <div className='mobile-footer'>
+      <div className='mobile-footer' style={{marginTop:'30px'}}>
         <MobileFooter />
       </div>
     </div>
