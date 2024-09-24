@@ -73,6 +73,7 @@ const MobileFooter = () => {
             <div className="footer-logos">
                 <div className="footer-logos-row">
                     <img src={FooterLogoBsi} alt="Footer Logo BSI" className="footer-logo" />
+                    <img src={FooterLogoBsi} alt="Footer Logo BSI" className="footer-logo" />
                     <img src={FooterLogoHipaa} alt="Footer Logo HIPAA" className="footer-logo" />
                 </div>
                 <div className="footer-logos-last-row">
