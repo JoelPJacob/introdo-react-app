@@ -1,12 +1,10 @@
 /* Footer css */
 
 .footer {
-    background: linear-gradient(
-      to bottom right,
-      rgba(23, 12, 52, 1),
-      rgba(72, 32, 132, 1),
-      rgba(58, 134, 255, 1)
-    );
+    background: linear-gradient(to bottom right,
+            rgba(23, 12, 52, 1),
+            rgba(72, 32, 132, 1),
+            rgba(58, 134, 255, 1));
     color: rgba(255, 255, 255, 1);
     text-align: center;
     padding: 120px 0px 120px 0px;
@@ -14,7 +12,7 @@
 
 .footer__container {
     margin: 0 auto;
-    padding: 0px 160px;
+    padding: 4%;
 }
 
 .footer__top-section {
@@ -64,7 +62,7 @@
     font-weight: 600;
 }
 
-.footer__subscription-container > *:not(.footer__subscription-text) {
+.footer__subscription-container>*:not(.footer__subscription-text) {
     margin-top: 10px;
 }
 
@@ -173,11 +171,11 @@
     border: 1px solid #ccc;
     border-radius: 100px;
 
-  }
-  
-  .dropdown-menu {
+}
+
+.dropdown-menu {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     right: 0;
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid #ccc;
@@ -188,9 +186,9 @@
     list-style: none;
     z-index: 10;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown-item {
+}
+
+.dropdown-item {
     padding: 10px;
     cursor: pointer;
     color: rgba(111, 104, 129, 1);
@@ -199,17 +197,17 @@
     font-weight: 200;
     font-size: 12.8px;
     text-align: center !important;
-  }
- 
-  
-  .dropdown-item:hover {
+}
+
+
+.dropdown-item:hover {
     background-color: #f0f0f0;
     color: #241042;
     text-align: center;
 
-  }
+}
 
-  .button {
+.button {
     border-radius: 100px;
     padding: 6.5px 10px 6.5px 12px;
     align-items: center;
@@ -224,20 +222,20 @@
     cursor: pointer;
     font-family: 'MonaSansMedium', sans-serif;
 }
-  
-  .button-icon {
+
+.button-icon {
     margin-left: 5px;
     width: 10px;
     height: 10px;
-  }
- 
-  .footer__label {
+}
+
+.footer__label {
     font-family: "MonaSansBold", sans-serif;
     font-weight: 400;
     font-size: 7px;
     line-height: 9.8px;
     letter-spacing: 12%;
     color: rgba(191, 186, 255, 1);
-    margin-left: 5px; 
-    vertical-align: super; 
-  }
+    margin-left: 5px;
+    vertical-align: super;
+}
